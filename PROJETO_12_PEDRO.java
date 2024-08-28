@@ -35,7 +35,7 @@ public class PROJETO_12_PEDRO {
     }
     public static void JOGADOR_D(String[] args) {
          Scanner ler = new Scanner(System.in);
-         boolean nome_F = true; 
+          
          
          System.out.println("Jogador numero Dois, informe seu nome");
         nome_D= ler.next();
@@ -45,8 +45,16 @@ public class PROJETO_12_PEDRO {
          System.out.println(dicas[0]);
          System.out.println("Qual o nome do filme");
          nome_F_D= ler.next();
-       while(nome_F){
-             System.out.println("Vc acertou");
+         for(int i = 0; i < 5 ; ++i){
+       if(nome_F.equals(nome_F_D)){
+           System.out.println("Voce acertou");
+           break;
        }
+       else{
+           System.out.println("Vc errou");
+           System.out.println(dicas[i+1]);
+            nome_F_D= ler.next();
+       }
+         }
     }
 }
